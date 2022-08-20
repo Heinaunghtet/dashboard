@@ -1,0 +1,20 @@
+export { default as About } from './About';
+export { default as Home } from './Home';
+export { default as Calendar } from './Calendar';
+export { default as ColorPicker } from './ColorPicker';
+export { default as Editor } from './Editor';
+export { default as Kanban } from './Kanban';
+export { default as Orders } from './Orders';
+export { default as Products } from './Products';
+export { default as Suppliers } from './Suppliers';
+export { default as Customers } from './Customers';
+export { default as Employees } from './Employees';
+
+export { default as Area } from './Charts/Area';
+export { default as Pie } from './Charts/Pie';
+export { default as Bar } from './Charts/Bar';
+export { default as Stacked } from './Charts/Stacked';
+export { default as ColorMapping } from './Charts/ColorMapping';
+export { default as Finicial } from './Charts/Finicial';
+export { default as Line } from './Charts/Line';
+export { default as Pyramid } from './Charts/Pyramid';
