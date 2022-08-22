@@ -44,5 +44,11 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require('tailwind-scrollbar'),
+        require('tailwindcss-hero-patterns'),
+    ],
+    variants: {
+        scrollbar: ['rounded']
+    }
 };

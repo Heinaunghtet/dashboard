@@ -43,49 +43,54 @@ const App = () => {
           )}
           {/* Sidebar */}
 
-          {/* Navbar */}
+         {/* wapper */}
           <div className={`dark:bg-main-bg  bg-main-bg min-h-screen w-full  ${activeMenu ? 'md:ml-72 ' : 'flex-2'}`}>
+            {/* Navbar */}
             <div className="navbar dark:bg-main-dark-bg bg-main-bg fixed md:static w-full">
               <Navbar />
             </div>
 
+         
+            {/* Navbar */}
+
+            {/* Routes */}
+            <div>
+              <Routes>
+                {/* Dashboard */}
+                <Route path='/' element={<Home />} />
+                <Route path='/ecommerce' element={<Home />} />
+                <Route path='/about' element={<About />} />
+
+                {/* Pages */}
+                <Route path='/products' element={<Products />} />
+                <Route path='/orders' element={<Orders />} />
+                <Route path='/customers' element={<Customers />} />
+                <Route path='/employees' element={<Employees />} />
+                <Route path='/supplier' element={<Suppliers />} />
+
+                {/* Apps */}
+                <Route path='/kanban' element={<Kanban />} />
+                <Route path='/editor' element={<Editor />} />
+                <Route path='/calendar' element={<Calendar />} />
+                <Route path='/color-picker' element={<ColorPicker />} />
+
+                {/* Charts */}
+                <Route path='/line' element={<Line />} />
+                <Route path='/area' element={<Area />} />
+                <Route path='/bar' element={<Bar />} />
+                <Route path='/pie' element={<Pie />} />
+                <Route path='/finicial' element={<Finicial />} />
+                <Route path='/color-mapping' element={<ColorMapping />} />
+                <Route path='/pyramid' element={<Pyramid />} />
+                <Route path='/stacked' element={<Stacked />} />
+
+
+              </Routes>
+            </div>
+            {/* Routes */}
+
           </div>
-          {/* Navbar */}
-
-          {/* Routes */}
-          <div>
-            <Routes>
-              {/* Dashboard */}
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-
-              {/* Pages */}
-              <Route path='/products' element={<Products />} />
-              <Route path='/orders' element={<Orders />} />
-              <Route path='/customers' element={<Customers />} />
-              <Route path='/employees' element={<Employees />} />
-              <Route path='/supplier' element={<Suppliers />} />
-
-              {/* Apps */}
-              <Route path='/kanban' element={<Kanban />} />
-              <Route path='/editor' element={<Editor />} />
-              <Route path='/calendar' element={<Calendar />} />
-              <Route path='/color-picker' element={<ColorPicker />} />
-
-              {/* Charts */}
-              <Route path='/line' element={<Line />} />
-              <Route path='/area' element={<Area />} />
-              <Route path='/bar' element={<Bar />} />
-              <Route path='/pie' element={<Pie />} />
-              <Route path='/finicial' element={<Finicial />} />
-              <Route path='/color-mapping' element={<ColorMapping />} />
-              <Route path='/pyramid' element={<Pyramid />} />
-              <Route path='/stacked' element={<Stacked />} />
-
-
-            </Routes>
-          </div>
-          {/* Routes */}
+          {/* wapper */}
         </div>
       </BrowserRouter>
     </div>

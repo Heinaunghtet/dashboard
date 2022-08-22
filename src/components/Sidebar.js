@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+// icons
 import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 import { FcAbout } from "react-icons/fc";
+
+// components
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
+// data
 import { links } from './../data/dummy';
 import autoprefixer from 'autoprefixer';
 
@@ -14,15 +18,22 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
 
-  const { activeMenu, setActiveMenu } = useStateContext();
-  const activeLink = 'flex items-center gap-2 mx-5  p-2  m-2 rounded-lg text-rose-600 text-md  hover:text-sky-600';
+  const { activeMenu, setActiveMenu,screenSize } = useStateContext();
+  const activeLink = 'flex items-center gap-2 mx-5  p-2  m-2 rounded-lg text-rose-800 text-md  hover:text-rose-600 hover:bg-rose-100' ;
   const normalLink = 'flex items-center gap-2  p-2  m-2 rounded-lg text-white text-gray-700 hover:bg-light-gray dark:text-gray-200 dark:hover:text-black ';
+  const handleCloseSidebar=()=>{
+    if(activeMenu && screenSize <=900){
+        setActiveMenu(false);
+    }
+    
+  }
+  
   return (
     <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
       {activeMenu && (
         <>
           <div className="flex justify-between-items-center">
-            <Link to="/" onClick={() => { }} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+            <Link to="/" onClick={handleCloseSidebar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
 
               <SiShopware className="" />
               <span>Dashboard</span>
@@ -49,7 +60,7 @@ const Sidebar = () => {
                     <NavLink
                       key={index}
                       to={`${link.name}`}
-                      onClick={() => { }}
+                      onClick={handleCloseSidebar}
                       className={({ isActive }) => (isActive ? activeLink : normalLink)}
 
                     >
