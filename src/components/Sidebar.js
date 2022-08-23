@@ -18,18 +18,18 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
 
-  const { activeMenu, setActiveMenu,screenSize } = useStateContext();
-  const activeLink = 'flex items-center gap-2 mx-5  p-2  m-2 rounded-lg text-rose-800 text-md  hover:text-rose-600 hover:bg-rose-100' ;
+  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const activeLink = 'flex items-center gap-2 mx-5  p-2  m-2 rounded-lg text-rose-800 text-md  hover:text-rose-600 hover:bg-rose-100';
   const normalLink = 'flex items-center gap-2  p-2  m-2 rounded-lg text-white text-gray-700 hover:bg-light-gray dark:text-gray-200 dark:hover:text-black ';
-  const handleCloseSidebar=()=>{
-    if(activeMenu && screenSize <=900){
-        setActiveMenu(false);
+  const handleCloseSidebar = () => {
+    if (activeMenu && screenSize <= 900) {
+      setActiveMenu(false);
     }
-    
+
   }
-  
+
   return (
-    <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
+    <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 scrollbar-thin scrollbar-thumb-sky-100 scrollbar-track-white' >
       {activeMenu && (
         <>
           <div className="flex justify-between-items-center">

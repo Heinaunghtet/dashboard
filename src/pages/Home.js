@@ -1,13 +1,13 @@
 import React from 'react';
 // icons
-import {BsCurrencyDollor} from 'react-icons/bs';
-import {GoPrimativeDot} from 'react-icons/go';
+import { BsCurrencyDollar } from 'react-icons/bs';
+import { GoPrimativeDot } from 'react-icons/go';
 // components
 import { Button, LineChart, Pie, SparkLine, stacked } from '../components';
 
 // data
-import { earningData , SparklineAreaData,ecomPieChartData} from '../data/dummy';
-import {useStateContext} from '../contexts/ContextProvider';
+import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
 
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full xl
         lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
-          
+
         </div>
 
       </div>
